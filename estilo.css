@@ -125,10 +125,33 @@ article > * {
 }
 
 /* EXERCÍCIO 7: o ticket */
+@keyframes move-ticket-in {
+  from {
+    left: -89px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes move-ticket-out {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -89px;
+  }
+}
+
 #ticket {
+  position: fixed;
+  left: -89px;
+  top: calc(50vh - 42px);
+  animation: 1s ease-in-out 0s 1 forwards move-ticket-out;
 }
 
 #ticket:hover {
+  animation: 1s ease-in-out 0s 1 forwards move-ticket-in;
 }
 
 /* EXERCÍCIO 8: deslocamento no siri e peixe */
