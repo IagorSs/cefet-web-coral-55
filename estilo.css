@@ -1,3 +1,29 @@
+:root {
+  --background-screen-color: white;
+  --background-content-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
+  --text-color: #333;
+  --border-external-color: #d3d3d3;
+  --border-internal-color: #aac0ae;
+  --title-color: #e90c0c;
+  --strong-color: #d027aa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-screen-color: #010a25;
+    --background-content-image: linear-gradient(
+      to bottom,
+      #17669b,
+      #071846 80%
+    );
+    --text-color: #f9f9f9;
+    --border-external-color: transparent;
+    --border-internal-color: transparent;
+    --title-color: #f36060;
+    --strong-color: #e45ac6;
+  }
+}
+
 /* EXERCÍCIO 1: fontes */
 /* importá-las aqui... e definir as `font-family` da turminha... */
 * {
@@ -9,36 +35,36 @@ h1 {
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--background-screen-color);
   margin: 0;
 }
 
 strong {
-  color: #d027aa;
+  color: var(--strong-color);
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: var(--background-content-image);
+  border-left: 1px solid var(--border-external-color);
+  border-right: 1px solid var(--border-external-color);
 }
 
 #cardapio {
   background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  border-top: 1px solid var(--border-internal-color);
+  border-bottom: 1px solid var(--border-internal-color);
+  border-left: 1px solid var(--border-internal-color);
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--text-color);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--text-color);
 }
 
 /* EXERCÍCIO 2: layout da página */
@@ -83,7 +109,7 @@ body,
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--title-color);
   font-weight: normal;
   text-align: center;
 }
