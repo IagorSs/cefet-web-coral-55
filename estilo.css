@@ -10,6 +10,7 @@ h1 {
 
 body {
   background-color: #fff;
+  margin: 0;
 }
 
 strong {
@@ -42,23 +43,36 @@ strong {
 
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
-  /* layout da página aqui */
-  /* ... */
-  /* ... */
-  /* ... */
-  /* ... */
+  width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template: auto 1fr auto / 154px auto;
+  grid-template-areas:
+    "lateral header"
+    "lateral menu"
+    "lateral footer";
+}
+
+html,
+body,
+#recipiente {
+  min-height: 100vh;
 }
 
 #cabecalho-pagina {
+  grid-area: header;
 }
 
 #lateral {
+  grid-area: lateral;
 }
 
 #cardapio {
+  grid-area: menu;
 }
 
 #rodape-pagina {
+  grid-area: footer;
 }
 
 /* EXERCÍCIO 3: cabeçalho da página */
