@@ -97,7 +97,17 @@ body,
 }
 
 /* EXERCÍCIO 4: cada item do menu */
+#cardapio {
+  padding: 0 20px;
+}
+
 article {
+  display: flex;
+  justify-content: space-between;
+}
+
+article > * {
+  line-height: 2em;
 }
 
 /* EXERCÍCIO 5: o rodapé */
